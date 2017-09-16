@@ -14,7 +14,8 @@ var express = require("express"),
 
 app.use(express.static(__dirname + "/public"));    
 app.use(express.static(__dirname + "/images"));    
-mongoose.connect("mongodb://localhost/colleges");
+//mongoose.connect("mongodb://localhost/colleges");
+mongoose.connect("mongodb://roy:idkidk1@ds135594.mlab.com:35594/riconnect");
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(methodOverride("_method"));
