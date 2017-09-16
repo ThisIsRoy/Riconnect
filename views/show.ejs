@@ -1,0 +1,39 @@
+<% include partials/header %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="thumbnail">
+                <div class="caption-full">
+                    <h1 class="show-title"><%= college.name + " College" %></h1>
+                </div>
+                <img class="img-responsive" src="<%= college.image %>">
+            </div>
+            <div class="well">
+                <div class="text-right">
+                    <a class="btn btn-success" href="/colleges/<%= college._id %>/comments/new">New Event</a>
+                    <a class="btn" href="/colleges">Back</a>
+                </div>
+                <!--<div class="container">-->
+                    <% college.comments.reverse().forEach(function(eachComment) { %>
+                    <hr>
+                        <strong><%= eachComment.title %></strong>
+                        <p class="pull-right">Submitted by <a href="/profile/<%= eachComment.author.id %>"><%= eachComment.author.username %></a></p>
+                        <hr class="comment-title">
+                        <p><%= eachComment.date %></p>
+                        <p><%= eachComment.type %></p>
+                        <p><%= eachComment.description %></p>
+                        <% if(currentUser && eachComment.author.id.equals(currentUser._id)) { %>
+                            <a class="btn btn-xs btn-warning" href="/colleges/<%= college._id %>/comments/<%= eachComment._id %>/edit">Edit</a>
+                            <form class="inline-element" action="/colleges/<%= college._id%>/comments/<%= eachComment._id %>?_method=DELETE" method="POST">
+                                <button class="btn btn-xs btn-danger">Delete</button>
+                            </form>
+                        <% } %>
+                    <% }); %>
+                <!--</div>-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include partials/footer %>

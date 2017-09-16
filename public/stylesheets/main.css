@@ -1,0 +1,122 @@
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail:hover {
+    border: 1px solid salmon;
+}
+
+/*Navbar */
+
+.navbar-header {
+    margin-left: 70px !important;
+}
+
+.navbar-nav {
+    margin-right: 40px !important;
+}
+
+.navbar-brand {
+    margin-right: 30px;
+    transition: background-color 0.5s ease;
+}
+
+a.navbar-brand:hover {
+    background-color: steelblue !important;
+}
+
+/*Colleges page*/
+#college-nav {
+    margin-bottom: 0;
+}
+
+.banner-pic {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 30vh;
+    background-image: url(http://entr.blogs.rice.edu/files/2015/12/campusImage-269ro4b.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.banner {
+    margin: 0 0 80px 0;
+    width: 100%;
+    height: 60px;
+    background-color: steelblue;
+}
+
+.banner h1 {
+    color: white;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 30px;
+    font-size: 2.2vw;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.caption {
+    height: 140px;
+}
+
+.caption img {
+    height: 85px;
+    width: auto;
+    float: right;
+}
+
+.caption h1 {
+    display: inline-block;
+}
+
+.col-md-6 .thumbnail:hover {
+    border: 2px solid steelblue;
+}
+
+.info-link {
+    margin-right: 80px;
+}
+
+/*Main page*/
+.college-name {
+    text-transform: uppercase;
+    color: steelblue;
+}
+
+.caption-full h1 {
+    text-align: center;
+    font-size: 4em;
+}
+
+.comment-title {
+    border: 1px solid steelblue;
+    width: 150px;
+    margin-left: 0;
+}
+
+/*Individual College Show Page*/
+.show-title {
+    color: steelblue;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.inline-element {
+    display: inline;
+}
+
+/*New comment and edit comment page*/
+.info-form {
+    width: 30%;
+    margin: 30px auto;
+}

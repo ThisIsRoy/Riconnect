@@ -1,0 +1,100 @@
+<% include partials/collegeheader %>
+
+    <div class="banner-pic">
+    </div>
+    
+    <div class="banner">
+        <h1>Plan. Integrate. Connect.</h1>
+    </div>
+    
+    <div class="container">
+        <div class="row text-center">   
+            <% colleges.forEach((eachCollege) => { %>
+                <div class="col-md-4 col-sm-6">
+                        <div class="thumbnail">
+                                <a href="/colleges/<%= eachCollege._id %>"><img src="<%= eachCollege.image %>"></a>
+                                <div class="caption">
+                                    <h1 class="college-name"><%= eachCollege.name %></h1>
+                                    <img alt="college" src="<%= eachCollege.crestImage %>">
+                                    <% if(eachCollege.comments[0] !== undefined) { %>
+                                        <p>Latest Event: <strong><%= eachCollege.comments[eachCollege.comments.length - 1].title %></strong></p>
+                                    <% } else { %>
+                                        <p>No Events Yet!</p>
+                                    <% }; %>
+                                    <a class="info-link" href="/colleges/<%= eachCollege._id %>">More Info</a>
+                                </div>
+                        </div>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+
+<% include partials/footer %>
+<!-- Delete this later, hardcoded base data --!>
+<!--<div class="container">-->
+<!--    <div class="row text-center">-->
+<!--        <div class="col-md-4 col-sm-6">-->
+<!--            <div class="thumbnail">-->
+<!--                <img src="https://uta-ir.tdl.org/uta-ir/bitstream/handle/10106/17435/0566013.jpg?sequence=1&isAllowed=y">-->
+<!--                <div class="caption">-->
+<!--                    <h4>Baker</h4>-->
+<!--                </div>-->
+<!--                <p><a href="#">More Info</a></p>-->
+<!--            </div>-->
+<!--        </div>-->
+        
+<!--        <div class="col-md-4 col-sm-6">-->
+<!--            <div class="thumbnail">-->
+<!--                <img src="http://willrice.org/imgs/Quad.jpg">-->
+<!--                <div class="caption">-->
+<!--                    <h4>Will Rice</h4>-->
+<!--                </div>-->
+<!--                <p><a href="#">More Info</a></p>-->
+<!--            </div>-->
+<!--        </div>-->
+        
+<!--        <div class="col-md-4 col-sm-6">-->
+<!--            <div class="thumbnail">-->
+<!--                <img src="http://i.imgur.com/9X0kOhy.jpg">-->
+<!--                <div class="caption">-->
+<!--                    <h4>Hanszen</h4>-->
+<!--                </div>-->
+<!--                <p><a href="#">More Info</a></p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+    
+<!--    <div class="row text-center">-->
+<!--        <div class="col-md-4 col-sm-6">-->
+<!--            <div class="thumbnail">-->
+<!--                <img src="http://www.machado-silvetti.com/PORTFOLIO/rice/images/03.jpg">-->
+<!--                <div class="caption">-->
+<!--                    <h4>Weiss</h4>-->
+<!--                </div>-->
+<!--                <p><a href="#">More Info</a></p>-->
+<!--            </div>-->
+<!--        </div>-->
+        
+<!--        <div class="col-md-4 col-sm-6">-->
+<!--            <div class="thumbnail">-->
+<!--                <img src="http://i.imgur.com/BlLvd5J.jpg">-->
+<!--                <div class="caption">-->
+<!--                    <h4>Jones</h4>-->
+<!--                </div>-->
+<!--                <p><a href="#">More Info</a></p>-->
+<!--            </div>-->
+<!--        </div>-->
+        
+<!--        <div class="col-md-4 col-sm-6">-->
+<!--            <div class="thumbnail">-->
+<!--                <img src="https://www.bluffton.edu/homepages/facstaff/sullivanm/texas/houston/ricejonesadd/court.jpg">-->
+<!--                <div class="caption">-->
+<!--                    <h4>Brown</h4>-->
+<!--                </div>-->
+<!--                <p><a href="#">More Info</a></p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<% include partials/footer %>
